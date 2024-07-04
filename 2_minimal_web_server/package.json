@@ -1,0 +1,14 @@
+{
+    "name": "simple_express_server",
+    "version": "1.0.0",
+    "type": "module", // This field enables ES6 module support in Node.js
+    "description": "A simple Express server example",
+    "main": "app.js",
+    "scripts": {
+      "start": "node app.js" // This script starts the server by running app.js
+    },
+    "dependencies": {
+      "express": "^4.17.1" // The express module is a dependency for this project
+    }
+  }
+  
