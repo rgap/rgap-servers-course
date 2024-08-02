@@ -1,6 +1,4 @@
-const http = require("http"); // Import the http module
-
-// Define the port to listen on
+const http = require("http");
 const port = 8080;
 
 // Create an HTTP server
@@ -12,7 +10,6 @@ const server = http.createServer((req, res) => {
   res.end("Hello, World!\n");
 });
 
-// Start the server and listen on the specified port
 server.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
 });

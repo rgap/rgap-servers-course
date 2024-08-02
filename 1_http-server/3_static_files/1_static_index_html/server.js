@@ -1,4 +1,4 @@
-const http = require("http"); // Import the http module
+const http = require("http");
 const fs = require("fs"); // Import the fs module to interact with the file system
 const path = require("path"); // Import the path module to handle file paths
 

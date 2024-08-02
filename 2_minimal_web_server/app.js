@@ -1,4 +1,3 @@
-// Importing the express module to create an Express application
 import express from "express";
 
 // Creating an instance of an Express application
@@ -46,8 +45,6 @@ app.get("/", (req, res) => {
   // }
 });
 
-// Starting the server to listen on the specified port
-// The callback function logs a message to the console once the server starts
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
