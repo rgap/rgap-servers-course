@@ -21,9 +21,9 @@ const server = app.listen(port, () => {
 });
 
 // Attach Socket.IO to the HTTP server instance
-const io = new Server(server);
+const socketServer = new Server(server);
 
-io.on("connection", socket => {
+socketServer.on("connection", socket => {
   console.log("User connected for collaborative editing");
 
   // Send the initial document content to the newly connected client

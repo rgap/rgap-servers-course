@@ -1,0 +1,8 @@
+# Ignore node_modules directory
+node_modules/
+
+# macOS system files
+.DS_Store
+
+# Temporal files
+README_tmp.md

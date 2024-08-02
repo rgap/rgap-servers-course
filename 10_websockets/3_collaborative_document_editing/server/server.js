@@ -1,10 +1,10 @@
 const WebSocket = require("ws");
-const wss = new WebSocket.Server({ port: 8084 });
+const socketServer = new WebSocket.Server({ port: 8084 });
 
 let clients = new Set();
 let documentContent = "Start editing...";
 
-wss.on("connection", ws => {
+socketServer.on("connection", ws => {
   clients.add(ws);
   console.log("User connected for collaborative editing");
 
