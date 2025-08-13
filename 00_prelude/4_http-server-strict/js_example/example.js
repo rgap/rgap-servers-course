@@ -5,7 +5,9 @@ function handleRequest(socket) {
   socket.on("data", data => {
     // Convert data to string
     const request = data.toString();
-    console.log(`Received request: ${request}`);
+    console.log("\nReceived request -----------------\n");
+    console.log(request);
+    console.log("\n----------------------------------\n");
 
     // Validate the HTTP method
     const validMethods = ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS", "HEAD"];
@@ -13,6 +15,7 @@ function handleRequest(socket) {
     let response;
     try {
       if (requestLines.length > 0) {
+        // Get just the first header item, for example
         const [method, path, version] = requestLines[0].split(" ");
         if (!validMethods.includes(method)) {
           throw new Error(`Invalid HTTP method: ${method}`);
@@ -25,6 +28,10 @@ function handleRequest(socket) {
       console.error(`Error: ${error.message}`);
       response = "HTTP/1.1 400 Bad Request\r\nContent-Type: text/plain\r\n\r\nBad Request";
     }
+
+    console.log("\nResponse to be sent -----------------\n");
+    console.log(response);
+    console.log("\n----------------------------------\n");
 
     // Send the response
     socket.write(response);
